@@ -9,11 +9,12 @@ from app.routers.appointment import router as appointment_router
 from app.routers.real_estate import router as realestate_router
 from app.routers.auth_router import router as auth_router
 from app.routers.user_router import router as user_router
+from app.routers.dashboard_router import router as dashboard_router
 from app.core.openapi_config import customize_openapi
 from app.core.security import get_password_hash
 
 # -----------------------------------------
-# 🚀 Initialize App
+# Initialize App
 # -----------------------------------------
 app = FastAPI(title="ANAND GROUPS CRM 1.0")
 
@@ -21,7 +22,7 @@ app = FastAPI(title="ANAND GROUPS CRM 1.0")
 Base.metadata.create_all(bind=engine)
 
 # -----------------------------------------
-# 🌍 CORS Middleware - MUST BE BEFORE ROUTERS
+# CORS Middleware - MUST BE BEFORE ROUTERS
 # -----------------------------------------
 app.add_middleware(
     CORSMiddleware,
@@ -32,28 +33,30 @@ app.add_middleware(
 )
 
 # -----------------------------------------
-# 🔗 Include Routers
+# Include Routers
 # -----------------------------------------
 app.include_router(auth_router)
+app.include_router(user_router, prefix="/api/users", tags=["Users"])
+app.include_router(dashboard_router, prefix="/api/dashboard", tags=["Dashboard"])
 app.include_router(problem_router, prefix="/api/problems", tags=["Problems"])
 app.include_router(appointment_router, prefix="/api/appointments", tags=["Appointments"])
 app.include_router(realestate_router, prefix="/api/real-estate", tags=["Real Estate"])
-app.include_router(user_router, prefix="/api/users", tags=["Users"])
+
 
 # -----------------------------------------
-# ❤️ Health Check
+# Health Check
 # -----------------------------------------
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
 # -----------------------------------------
-# 🧩 OpenAPI Customization
+# OpenAPI Customization
 # -----------------------------------------
 customize_openapi(app)
 
 # -----------------------------------------
-# 🧑‍💼 Auto-Create Super Admin
+# Auto-Create Super Admin
 # -----------------------------------------
 @app.on_event("startup")
 def create_super_admin():
@@ -82,7 +85,7 @@ def create_super_admin():
         db.close()
 
 # -----------------------------------------
-# 🧭 SQLAdmin Dashboard (/admin)
+# SQLAdmin Dashboard (/admin)
 # -----------------------------------------
 class UserAdmin(ModelView, model=User):
     column_list = [User.id, User.username, User.email, User.role, User.is_active, User.created_at]

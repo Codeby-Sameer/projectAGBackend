@@ -99,11 +99,9 @@ def get_current_user(
 # 🧑‍💼 ADMIN-ONLY REGISTRATION
 # -----------------------------------
 ALLOWED_ROLES = [
-    "Receptionist/Staff",
-    "Admin Personnel",
-    "Specialist",
+    "Receptionist",
     "Manager",
-    "Administrator",
+    "Superadmin",
 ]
  
  
