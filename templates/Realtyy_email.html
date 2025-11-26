@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Message</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e2e2e2;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #5b2fcb, #9d48ff);
+            padding: 35px 30px;
+            color: #fff;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        p {
+            margin: 6px 0;
+            font-size: 15px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 25px 0;
+        }
+
+        .footer {
+            padding: 20px 30px;
+            border-top: 4px solid #6c2dc7;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #fafafa;
+        }
+
+        .footer img {
+            width: 80px;
+            border-radius: 5px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            margin-right: 8px;
+        }
+
+        a {
+            color: #6c2dc7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>New Contact Submission</h2>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+
+            <p>Hello Team,</p>
+
+            <p>A new inquiry has been received via the 
+                <strong>Levitica Technologies Website</strong>. Below are the details submitted by the user:</p>
+
+            <!-- Contact Details -->
+            <div class="section-title">📌 Contact Details</div>
+
+            <p><strong>Name:</strong> {{ full_name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Phone:</strong> {{ phone_number }}</p>
+
+            <!-- Requirement Details -->
+            <div class="section-title">🏡 Requirement Details</div>
+
+            <p><strong>Property Type:</strong> {{ property_type }}</p>
+            <p><strong>Budget Range:</strong> {{ budget_range }}</p>
+            <p><strong>Timeline:</strong> {{ timeline }}</p>
+
+            <!-- Message -->
+            <div class="section-title">📝 Message From User</div>
+            <p>{{ message }}</p>
+
+            <hr>
+
+            <p><strong>IP Address:</strong> {{ ip_address }}</p>
+
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <img src="cid:company_logo" alt="Levitica Logo">
+
+            <div class="footer-text">
+                <strong>Levitica Technologies Pvt Ltd</strong><br>
+                Website Inquiry Notification<br>
+                📞 +91 93277 29553<br>
+                🌐 <a href="https://www.leviticatech.com">www.leviticatech.com</a><br>
+                ✉️ info@leviticatech.com<br>
+
+                <div class="social-icons" style="margin-top: 8px;">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/20/20837.png"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

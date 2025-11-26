@@ -12,6 +12,7 @@ from app.routers.user_router import router as user_router
 from app.routers.dashboard_router import router as dashboard_router
 from app.core.openapi_config import customize_openapi
 from app.core.security import get_password_hash
+from app.routers import Realtyy,Infra,Cinemaz,Locker,Trading,Imports_Exports,Wealth,Events,Yatra,Devocation,Celebrity,Technology
 
 # -----------------------------------------
 # Initialize App
@@ -43,6 +44,23 @@ app.include_router(appointment_router, prefix="/api/appointments", tags=["Appoin
 app.include_router(realestate_router, prefix="/api/real-estate", tags=["Real Estate"])
 
 
+#--------------------------------------
+
+app.include_router(Cinemaz.router)
+app.include_router(Realtyy.router)
+app.include_router(Infra.router)
+app.include_router(Events.router)
+app.include_router(Imports_Exports.router)
+app.include_router(Technology.router)
+#app.include_router(Pharma.router)
+app.include_router(Devocation.router)
+app.include_router(Yatra.router)
+app.include_router(Celebrity.router)
+app.include_router(Locker.router)
+app.include_router(Trading.router)
+app.include_router(Wealth.router)
+
+
 # -----------------------------------------
 # Health Check
 # -----------------------------------------
@@ -64,7 +82,7 @@ def create_super_admin():
     try:
         admin_email = "admin@anandgroups.com"
         admin_password = "Admin@123"
-        admin_role = "superadmin"
+        admin_role = "Superadmin"
 
         existing_admin = db.query(User).filter(User.email == admin_email).first()
         if not existing_admin:
