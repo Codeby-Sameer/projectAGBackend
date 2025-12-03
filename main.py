@@ -1,18 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqladmin import Admin, ModelView
-from app.core.database import Base, engine, SessionLocal
-from app.models.user import User
-from app.models.problem import Problem
-from app.routers.problem_router import router as problem_router
-from app.routers.appointment import router as appointment_router
-from app.routers.real_estate import router as realestate_router
-from app.routers.auth_router import router as auth_router
-from app.routers.user_router import router as user_router
-from app.routers.dashboard_router import router as dashboard_router
-from app.core.openapi_config import customize_openapi
-from app.core.security import get_password_hash
-from app.routers import Realtyy,Infra,Cinemaz,Locker,Trading,Imports_Exports,Wealth,Events,Yatra,Devocation,Celebrity,Technology
+from core.database import Base, engine, SessionLocal
+from models.user import User
+from models.problem import Problem
+from routers.problem_router import router as problem_router
+from routers.appointment import router as appointment_router
+from routers.real_estate import router as realestate_router
+from routers.auth_router import router as auth_router
+from routers.user_router import router as user_router
+from routers.dashboard_router import router as dashboard_router
+from core.openapi_config import customize_openapi
+from core.security import get_password_hash
+from routers import Realtyy,Infra,Cinemaz,Locker,Trading,Imports_Exports,Wealth,Events,Yatra,Devocation,Celebrity,Technology
 
 # -----------------------------------------
 # Initialize App
@@ -52,7 +52,7 @@ app.include_router(Infra.router)
 app.include_router(Events.router)
 app.include_router(Imports_Exports.router)
 app.include_router(Technology.router)
-#app.include_router(Pharma.router)
+#include_router(Pharma.router)
 app.include_router(Devocation.router)
 app.include_router(Yatra.router)
 app.include_router(Celebrity.router)

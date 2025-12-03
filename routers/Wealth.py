@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, Request, BackgroundTasks
 from sqlalchemy.orm import Session
-from app.core.database import SessionLocal
-from app.models.Trading_models import TradingSupportRequest
-from app.schemas.trading_schema import TradingSupportCreate, TradingSupportOut
-from app.core.email_utils import build_email, send_email_message
+from core.database import SessionLocal
+from models.Trading_models import TradingSupportRequest
+from schemas.trading_schema import TradingSupportCreate, TradingSupportOut
+from core.email_utils import build_email, send_email_message
 from jinja2 import Environment, FileSystemLoader
 import os
 

@@ -9,3 +9,10 @@ databases
 python-dotenv
 aiofile
 typing-extensions
+sqladmin
+psycopg2-binary
+python-jose
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.2
+pydantic-settings
+pydantic[email]

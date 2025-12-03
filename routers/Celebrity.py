@@ -4,10 +4,10 @@ from sqlalchemy import select
 import traceback
 from typing import List, Dict, Any
 
-from app.core.database import get_db
-from app.models.Celebrity_models import Message
-from app.schemas.yatra_schema import ContactCreate, ContactRead
-from app.core.email_utils import build_email, send_email_message
+from core.database import get_db
+from models.Celebrity_models import Message
+from schemas.yatra_schema import ContactCreate, ContactRead
+from core.email_utils import build_email, send_email_message
 
 router = APIRouter(prefix="/Celebrity", tags=["Celebrity"])
 

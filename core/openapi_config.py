@@ -7,8 +7,8 @@ def customize_openapi(app):
     """
 
     def custom_openapi():
-        if app.openapi_schema:
-            return app.openapi_schema
+        if openapi_schema:
+            return openapi_schema
 
         # Base OpenAPI metadata
         openapi_schema = get_openapi(
@@ -24,7 +24,7 @@ def customize_openapi(app):
                 "- 🧑‍💼 **Manager** → Manage cases, appointments, and reports\n"
                 "- ⚙️ **Administrator** → Full system access"
             ),
-            routes=app.routes,
+            routes=routes,
         )
 
         # OAuth2 Password Flow for Swagger “Authorize” modal
@@ -54,7 +54,7 @@ def customize_openapi(app):
             "email": "support@anandgroups.com",
         }
 
-        app.openapi_schema = openapi_schema
-        return app.openapi_schema
+        openapi_schema = openapi_schema
+        return openapi_schema
 
-    app.openapi = custom_openapi
+    openapi = custom_openapi

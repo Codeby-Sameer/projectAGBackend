@@ -3,11 +3,11 @@
  
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from app.core.database import get_db
-from app.models.user import User
-from app.schemas.user import UserCreate, UserRead, UserUpdate
-from app.core.security import get_password_hash
-from app.routers.auth_router import get_current_user  # JWT dependency
+from core.database import get_db
+from models.user import User
+from schemas.user import UserCreate, UserRead, UserUpdate
+from core.security import get_password_hash
+from routers.auth_router import get_current_user  # JWT dependency
  
 router = APIRouter()
  

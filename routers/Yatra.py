@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException, status
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
 
-from app.core.database import get_db
-from app.models.Yatra_models import Message
-from app.schemas.yatra_schema import ContactCreate, ContactRead
-from app.core.email_utils import build_email, send_email_message
+from core.database import get_db
+from models.Yatra_models import Message
+from schemas.yatra_schema import ContactCreate, ContactRead
+from core.email_utils import build_email, send_email_message
 
 router = APIRouter(prefix="/Yatra", tags=["Yatra"])
 

@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, Request, BackgroundTasks
 from sqlalchemy.orm import Session
-from app.core.email_utils import build_email, send_email_message
-from app.core.database import get_db
+from core.email_utils import build_email, send_email_message
+from core.database import get_db
 
-from app.models.Trading_models import TradingSupportRequest
-from app.schemas.trading_schema import TradingSupportCreate, TradingSupportOut
+from models.Trading_models import TradingSupportRequest
+from schemas.trading_schema import TradingSupportCreate, TradingSupportOut
 
 import os
 

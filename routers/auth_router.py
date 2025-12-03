@@ -4,10 +4,10 @@ from sqlalchemy.orm import Session
 from datetime import timedelta
 from jose import jwt, JWTError
 from pydantic import BaseModel, EmailStr
-from app.core.database import get_db
-from app.core.security import verify_password, create_access_token, get_password_hash
-from app.models.user import User
-from app.core.config import settings  # must have SECRET_KEY and ALGORITHM
+from core.database import get_db
+from core.security import verify_password, create_access_token, get_password_hash
+from models.user import User
+from core.config import settings  # must have SECRET_KEY and ALGORITHM
  
 ACCESS_TOKEN_EXPIRE_MINUTES = 60  # 1 hour validity
  

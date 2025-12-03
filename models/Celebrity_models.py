@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from sqlalchemy.sql import func
-from app.core.database import Base
+from core.database import Base
 class Message(Base):
     __tablename__ = "celebrity_contacts"
 

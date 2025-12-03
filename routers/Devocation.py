@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 import os
 from datetime import datetime
 
-from app.core.email_utils import build_email, send_email_message
-from app.core.database import get_db
-import app.models.Devocation_models as models
-import app.schemas.devocation_schema as schemas
+from core.email_utils import build_email, send_email_message
+from core.database import get_db
+import models.Devocation_models as models
+import schemas.devocation_schema as schemas
 
 router = APIRouter(prefix="/Devocation", tags=["Devocation"])
 

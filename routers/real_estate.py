@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 
-from app.core.database import get_db
-from app.schemas.real_estate import RealEstateCreate, RealEstateRead
-from app.services.real_estate_service import create_realestate, get_realestate, list_realestates
-from app.core.permissions import role_required  # 🔒 RBAC import
+from core.database import get_db
+from schemas.real_estate import RealEstateCreate, RealEstateRead
+from services.real_estate_service import create_realestate, get_realestate, list_realestates
+from core.permissions import role_required  # 🔒 RBAC import
 
 router = APIRouter()
 

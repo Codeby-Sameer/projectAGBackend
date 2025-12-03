@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, Request, BackgroundTasks
 from sqlalchemy.orm import Session
-from app.schemas.Realtyy_schema import ContactCreate,ContactOut
-from app.models.Realtyy_models import Contact
-from app.core.database import get_db
-from app.core.email_utils import build_email, send_email_message
+from schemas.Realtyy_schema import ContactCreate,ContactOut
+from models.Realtyy_models import Contact
+from core.database import get_db
+from core.email_utils import build_email, send_email_message
 
 
 router = APIRouter(prefix="/Realtyy", tags=["Realtyy"])

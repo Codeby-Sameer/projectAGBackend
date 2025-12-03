@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from sqlalchemy.sql import func
-from app.core.database import Base
+from core.database import Base
 
 class DevocationContact(Base):
     __tablename__ = "devocation_contacts"

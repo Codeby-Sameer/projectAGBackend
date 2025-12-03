@@ -2,10 +2,10 @@ import os
 from fastapi import APIRouter, Request, BackgroundTasks, Depends
 from sqlalchemy.orm import Session
 from typing import Dict
-from app.core.database import get_db
-import app.models.Infra_models as models
-import app.schemas.infra_schema as schemas
-from app.core.email_utils import build_email, send_email_message
+from core.database import get_db
+import models.Infra_models as models
+import schemas.infra_schema as schemas
+from core.email_utils import build_email, send_email_message
 
 router = APIRouter(prefix="/Infra", tags=["Infra"])
 

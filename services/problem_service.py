@@ -4,9 +4,9 @@ from uuid import uuid4
 from typing import Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.models.problem import ProblemReport
-from app.schemas.problem import ProblemReportCreate
-from app.core.config import settings
+from models.problem import ProblemReport
+from schemas.problem import ProblemReportCreate
+from core.config import settings
 from fastapi import UploadFile, HTTPException
 
 

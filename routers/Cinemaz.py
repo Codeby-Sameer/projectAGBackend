@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, Request, BackgroundTasks, HTTPException
 from sqlalchemy.orm import Session
 import os
-from app.core.email_utils import build_email, send_email_message
-from app.core.database import get_db
-import app.models.Cinemaz_models as models
-import app.schemas.Cinemaz_schema as schemas
+from core.email_utils import build_email, send_email_message
+from core.database import get_db
+import models.Cinemaz_models as models
+import schemas.Cinemaz_schema as schemas
 
 router = APIRouter(prefix="/Cinemaz", tags=["Cinemaz"])
 

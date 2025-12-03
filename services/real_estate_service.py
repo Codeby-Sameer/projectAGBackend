@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models.real_estate import RealEstate
-from app.schemas.real_estate import RealEstateCreate
+from models.real_estate import RealEstate
+from schemas.real_estate import RealEstateCreate
 
 def create_realestate(db: Session, payload: RealEstateCreate) -> RealEstate:
     obj = RealEstate(

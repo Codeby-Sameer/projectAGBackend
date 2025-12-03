@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from datetime import datetime
-from app.core.database import get_db
-from app.models.problem import Problem
-from app.models.appointment import Appointment
-from app.models.real_estate import RealEstate
+from core.database import get_db
+from models.problem import Problem
+from models.appointment import Appointment
+from models.real_estate import RealEstate
 
 router = APIRouter()
 

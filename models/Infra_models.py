@@ -1,7 +1,7 @@
 
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from sqlalchemy.sql import func
-from app.core.database import Base
+from core.database import Base
 
 class ContactAlternate(Base):
     __tablename__ = "Infra_contacts"

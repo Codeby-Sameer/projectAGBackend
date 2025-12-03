@@ -1,7 +1,7 @@
 # app/models.py
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from sqlalchemy.sql import func
-from app.core.database import Base
+from core.database import Base
 
 class Contact(Base):
     __tablename__ = "Realtyy_contacts"

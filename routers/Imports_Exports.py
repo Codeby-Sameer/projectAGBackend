@@ -1,10 +1,10 @@
 import os
 from fastapi import APIRouter, Depends, Request
 from sqlalchemy.orm import Session
-from app.core.database import SessionLocal
-from app.models.Imports_Exports_models import Contact
-from app.schemas.imports_Exports_schema import ContactCreate
-from app.core.email_utils import build_email, send_email_message
+from core.database import SessionLocal
+from models.Imports_Exports_models import Contact
+from schemas.imports_Exports_schema import ContactCreate
+from core.email_utils import build_email, send_email_message
 
 router = APIRouter(prefix="/imports & Exports", tags=["imports & Exports"])
 

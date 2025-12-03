@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, Request, BackgroundTasks, HTTPException
 from sqlalchemy.orm import Session
 import os
 
-from app.core.email_utils import build_email, send_email_message
-from app.core.database import get_db
-import app.models.Locker_models as models
-import app.schemas.locker_schema as schemas
+from core.email_utils import build_email, send_email_message
+from core.database import get_db
+import models.Locker_models as models
+import schemas.locker_schema as schemas
 
 router = APIRouter(prefix="/locker", tags=["Locker"])
 

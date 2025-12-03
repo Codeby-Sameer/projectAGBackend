@@ -1,6 +1,6 @@
 # app/models/real_estate.py
 from sqlalchemy import Column, Integer, String, Boolean, Date
-from app.core.database import Base
+from core.database import Base
 
 class RealEstate(Base):
     __tablename__ = "realestate"

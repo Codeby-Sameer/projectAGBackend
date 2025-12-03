@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, Request
 from sqlalchemy.orm import Session
-from app.core.database import SessionLocal
-from app.models.Events_models import Contact
-from app.schemas.events_schema import ContactCreate
-from app.core.email_utils import build_email, send_email_message
+from core.database import SessionLocal
+from models.Events_models import Contact
+from schemas.events_schema import ContactCreate
+from core.email_utils import build_email, send_email_message
 
 
 router = APIRouter(prefix="/Events & Media", tags=["Events & Media"])

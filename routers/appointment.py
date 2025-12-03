@@ -3,10 +3,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 
-from app.core.database import get_db
-from app.schemas.appointment import AppointmentCreate, AppointmentRead
-from app.services.appointment_service import create_appointment, list_appointments, get_appointment_by_id
-from app.core.permissions import role_required
+from core.database import get_db
+from schemas.appointment import AppointmentCreate, AppointmentRead
+from services.appointment_service import create_appointment, list_appointments, get_appointment_by_id
+from core.permissions import role_required
 
 router = APIRouter()
 

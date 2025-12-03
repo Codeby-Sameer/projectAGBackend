@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.schemas.appointment import AppointmentCreate
-from app.models.appointment import Appointment
+from schemas.appointment import AppointmentCreate
+from models.appointment import Appointment
 
 def create_appointment(db: Session, payload: AppointmentCreate) -> Appointment:
     obj = Appointment(

@@ -17,8 +17,8 @@ fileConfig(config.config_file_name)
 # make the app's metadata available for 'autogenerate'
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))  # project root
-from app.models import Base  # Base metadata
-from app.core.config import settings
+from models import Base  # Base metadata
+from core.config import settings
 
 target_metadata = Base.metadata
 
